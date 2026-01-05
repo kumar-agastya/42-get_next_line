@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agastya-kumar <agastya-kumar@student.42    +#+  +:+       +#+        */
+/*   By: kkumar <kkumar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:39:30 by agastya-kum       #+#    #+#             */
-/*   Updated: 2026/01/05 16:29:05 by agastya-kum      ###   ########.fr       */
+/*   Created: 2026/01/05 16:47:56 by kkumar            #+#    #+#             */
+/*   Updated: 2026/01/05 16:48:19 by kkumar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
