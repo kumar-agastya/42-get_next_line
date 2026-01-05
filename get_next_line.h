@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkumar <kkumar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agastya-kumar <agastya-kumar@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:39:18 by kkumar            #+#    #+#             */
-/*   Updated: 2026/01/05 15:39:19 by kkumar           ###   ########.fr       */
+/*   Created: 2026/01/05 15:39:18 by agastya-kum       #+#    #+#             */
+/*   Updated: 2026/01/05 16:29:49 by agastya-kum      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 char	*get_next_line(int fd);
 
 size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

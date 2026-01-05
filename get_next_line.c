@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkumar <kkumar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agastya-kumar <agastya-kumar@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:39:11 by kkumar            #+#    #+#             */
-/*   Updated: 2026/01/05 15:39:12 by kkumar           ###   ########.fr       */
+/*   Created: 2026/01/05 15:39:11 by agastya-kum       #+#    #+#             */
+/*   Updated: 2026/01/05 16:29:34 by agastya-kum      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	*read_and_store(int fd, char *store)
 	if (!buf)
 		return (NULL);
 	bytes = 1;
-	while (!ft_strchr(store, '\n') && bytes > 0)
+	while (bytes > 0 && !ft_strchr(store, '\n'))
 	{
 		bytes = read(fd, buf, BUFFER_SIZE);
 		if (bytes < 0)
@@ -54,7 +54,6 @@ static char	*extract_line(char *store)
 static char	*clean_store(char *store)
 {
 	size_t	i;
-	size_t	len;
 	char	*new;
 
 	i = 0;
@@ -65,13 +64,7 @@ static char	*clean_store(char *store)
 		free(store);
 		return (NULL);
 	}
-	len = ft_strlen(store + i + 1);
-	if (len == 0)
-	{
-		free(store);
-		return (NULL);
-	}
-	new = ft_substr(store, i + 1, len);
+	new = ft_substr(store, i + 1, ft_strlen(store) - i - 1);
 	free(store);
 	return (new);
 }
@@ -87,12 +80,6 @@ char	*get_next_line(int fd)
 	if (!store)
 		return (NULL);
 	line = extract_line(store);
-	if (!line)
-	{
-		free(store);
-		store = NULL;
-		return (NULL);
-	}
 	store = clean_store(store);
 	return (line);
 }
