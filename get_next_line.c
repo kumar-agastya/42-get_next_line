@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agastya-kumar <agastya-kumar@student.42    +#+  +:+       +#+        */
+/*   By: kkumar <kkumar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 12:00:00 by agastya           #+#    #+#             */
-/*   Updated: 2025/12/22 03:00:30 by agastya-kum      ###   ########.fr       */
+/*   Created: 2026/01/05 15:39:11 by kkumar            #+#    #+#             */
+/*   Updated: 2026/01/05 15:39:12 by kkumar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ static char	*clean_store(char *store)
 	free(store);
 	return (new);
 }
-
 
 char	*get_next_line(int fd)
 {
